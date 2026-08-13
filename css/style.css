@@ -1,1 +1,813 @@
+/* ================================
+   MM CONTROL - ESTILOS
+   ================================ */
 
+:root {
+  --fondo: #f4f6fa;
+  --blanco: #ffffff;
+  --texto: #252a34;
+  --gris: #727985;
+  --borde: #e5e8ee;
+
+  --principal: #7b1e3a;
+  --principal-hover: #98264a;
+
+  --rojo: #d83b4a;
+  --amarillo: #e39a22;
+  --verde: #299363;
+  --azul: #3678d4;
+}
+
+
+/* ================================
+   GENERAL
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background: var(--fondo);
+
+  color: var(--texto);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* ================================
+   MENÚ LATERAL
+   ================================ */
+
+.sidebar {
+
+  position: fixed;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 245px;
+
+  background: #251b22;
+
+  color: white;
+
+  padding: 22px 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 5px 8px 30px;
+}
+
+
+.logo-box {
+
+  width: 45px;
+
+  height: 45px;
+
+  border-radius: 12px;
+
+  background: var(--principal);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 14px;
+
+  font-weight: bold;
+}
+
+
+.logo strong {
+
+  display: block;
+
+  font-size: 15px;
+
+  letter-spacing: .5px;
+}
+
+
+.logo small {
+
+  display: block;
+
+  margin-top: 4px;
+
+  color: #aaa1a7;
+
+  font-size: 11px;
+}
+
+
+/* NAVEGACIÓN */
+
+nav {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+nav a {
+
+  color: #c9c3c7;
+
+  text-decoration: none;
+
+  padding: 13px 14px;
+
+  border-radius: 9px;
+
+  font-size: 14px;
+
+  transition: .2s;
+}
+
+
+nav a:hover {
+
+  background: #382a32;
+
+  color: white;
+}
+
+
+nav a.active {
+
+  background: var(--principal);
+
+  color: white;
+
+  font-weight: bold;
+}
+
+
+.menu-footer {
+
+  margin-top: auto;
+
+  color: #82777d;
+
+  font-size: 11px;
+
+  padding: 8px;
+}
+
+
+/* ================================
+   CONTENIDO
+   ================================ */
+
+.main {
+
+  margin-left: 245px;
+
+  padding: 28px;
+
+  max-width: 1700px;
+}
+
+
+/* ================================
+   ENCABEZADO
+   ================================ */
+
+.header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+
+.subtitle {
+
+  color: var(--principal);
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  letter-spacing: 1.5px;
+}
+
+
+.header h1 {
+
+  margin: 6px 0 0;
+
+  font-size: 28px;
+}
+
+
+/* BOTÓN */
+
+#refreshBtn {
+
+  border: none;
+
+  background: var(--principal);
+
+  color: white;
+
+  padding: 11px 17px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  transition: .2s;
+}
+
+
+#refreshBtn:hover {
+
+  background: var(--principal-hover);
+
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   FILTROS
+   ================================ */
+
+.filters {
+
+  background: white;
+
+  border: 1px solid var(--borde);
+
+  border-radius: 13px;
+
+  padding: 17px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    2fr
+    auto;
+
+  gap: 14px;
+
+  align-items: end;
+
+  margin-bottom: 20px;
+}
+
+
+.filter label {
+
+  display: block;
+
+  font-size: 11px;
+
+  font-weight: bold;
+
+  color: var(--gris);
+
+  margin-bottom: 6px;
+}
+
+
+.filter select,
+.filter input {
+
+  width: 100%;
+
+  height: 40px;
+
+  border: 1px solid #dfe3e9;
+
+  border-radius: 8px;
+
+  padding: 0 11px;
+
+  background: white;
+
+  color: var(--texto);
+
+  outline: none;
+}
+
+
+.filter select:focus,
+.filter input:focus {
+
+  border-color: var(--principal);
+}
+
+
+.update-time {
+
+  font-size: 10px;
+
+  color: var(--gris);
+
+  text-align: right;
+
+  line-height: 1.5;
+}
+
+
+.update-time strong {
+
+  display: block;
+
+  color: var(--texto);
+
+  font-size: 12px;
+}
+
+
+/* ================================
+   TARJETAS
+   ================================ */
+
+.cards {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+.card {
+
+  background: white;
+
+  border: 1px solid var(--borde);
+
+  border-radius: 13px;
+
+  padding: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  transition: .2s;
+}
+
+
+.card:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 20px
+    rgba(0,0,0,.06);
+}
+
+
+.card-icon {
+
+  width: 43px;
+
+  height: 43px;
+
+  border-radius: 11px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 19px;
+
+  font-weight: bold;
+}
+
+
+.card span {
+
+  display: block;
+
+  color: var(--gris);
+
+  font-size: 12px;
+
+  margin-bottom: 4px;
+}
+
+
+.card strong {
+
+  display: block;
+
+  font-size: 29px;
+}
+
+
+/* COLORES */
+
+.card.red .card-icon {
+
+  background: #fde6e9;
+
+  color: var(--rojo);
+}
+
+
+.card.yellow .card-icon {
+
+  background: #fff1d7;
+
+  color: var(--amarillo);
+}
+
+
+.card.green .card-icon {
+
+  background: #e1f5ea;
+
+  color: var(--verde);
+}
+
+
+.card.blue .card-icon {
+
+  background: #e6effd;
+
+  color: var(--azul);
+}
+
+
+.card.red strong {
+
+  color: var(--rojo);
+}
+
+
+.card.yellow strong {
+
+  color: var(--amarillo);
+}
+
+
+.card.green strong {
+
+  color: var(--verde);
+}
+
+
+.card.blue strong {
+
+  color: var(--azul);
+}
+
+
+/* ================================
+   GRÁFICOS
+   ================================ */
+
+.charts {
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1.25fr;
+
+  gap: 18px;
+
+  margin-bottom: 20px;
+}
+
+
+.panel {
+
+  background: white;
+
+  border: 1px solid var(--borde);
+
+  border-radius: 13px;
+
+  padding: 19px;
+}
+
+
+.panel-header {
+
+  margin-bottom: 12px;
+}
+
+
+.panel-header h2 {
+
+  margin: 0;
+
+  font-size: 16px;
+}
+
+
+.panel-header p {
+
+  margin: 5px 0 0;
+
+  font-size: 11px;
+
+  color: var(--gris);
+}
+
+
+.chart-container {
+
+  height: 250px;
+
+  position: relative;
+}
+
+
+/* ================================
+   TABLA
+   ================================ */
+
+.table-panel {
+
+  margin-bottom: 20px;
+}
+
+
+.table-container {
+
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+
+table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 800px;
+}
+
+
+thead th {
+
+  background: #fafbfc;
+
+  color: var(--gris);
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .5px;
+
+  text-align: left;
+
+  padding: 13px;
+
+  border-bottom: 1px solid var(--borde);
+}
+
+
+tbody td {
+
+  padding: 13px;
+
+  font-size: 13px;
+
+  border-bottom: 1px solid #eef0f3;
+}
+
+
+tbody tr:hover {
+
+  background: #fafbfc;
+}
+
+
+/* ================================
+   ESTADOS
+   ================================ */
+
+.badge {
+
+  display: inline-block;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: bold;
+}
+
+
+.badge.inop {
+
+  background: #fde6e9;
+
+  color: #b52e3e;
+}
+
+
+.badge.proceso {
+
+  background: #fff1d7;
+
+  color: #a76b08;
+}
+
+
+.badge.operativa {
+
+  background: #e1f5ea;
+
+  color: #247b50;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+
+  text-align: center;
+
+  color: #8b929d;
+
+  font-size: 10px;
+
+  padding: 22px;
+}
+
+
+/* ================================
+   TABLET
+   ================================ */
+
+@media (max-width: 1000px) {
+
+  .sidebar {
+
+    position: static;
+
+    width: 100%;
+
+    height: auto;
+
+  }
+
+
+  .sidebar nav {
+
+    flex-direction: row;
+
+    overflow-x: auto;
+
+  }
+
+
+  .menu-footer {
+
+    display: none;
+
+  }
+
+
+  .main {
+
+    margin-left: 0;
+
+    padding: 18px;
+
+  }
+
+
+  .cards {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+
+  .charts {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+
+/* ================================
+   CELULAR
+   ================================ */
+
+@media (max-width: 600px) {
+
+  .main {
+
+    padding: 13px;
+
+  }
+
+
+  .header {
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+  }
+
+
+  .header h1 {
+
+    font-size: 22px;
+
+  }
+
+
+  .filters {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .update-time {
+
+    text-align: left;
+
+  }
+
+
+  .cards {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .charts {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .panel {
+
+    padding: 14px;
+
+  }
+
+}
